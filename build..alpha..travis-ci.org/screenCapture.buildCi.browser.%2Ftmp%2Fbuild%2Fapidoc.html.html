@@ -1,0 +1,548 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/zeit/release#readme">release (v1.2.1)</a>
+</h1>
+<h4>Manage GitHub Releases from the command line</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.release">module release</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>bin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>bugs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>definitions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>dependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>devDependencies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>engines</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>files</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>keywords</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>lint-staged</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>repo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>scripts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>spinner</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">release.</span>xo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>author</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>description</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>homepage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>license</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>name</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>repository</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">release.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.release.definitions">module release.definitions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.release.definitions.reference">
+            function <span class="apidocSignatureSpan">release.definitions.</span>reference
+            <span class="apidocSignatureSpan">(#[-0-9]+\)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.release.definitions.type">
+            function <span class="apidocSignatureSpan">release.definitions.</span>type
+            <span class="apidocSignatureSpan">(text, changeTypes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.release.repo">module release.repo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.release.repo.branchSynced">
+            function <span class="apidocSignatureSpan">release.repo.</span>branchSynced
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.release.repo.getRepo">
+            function <span class="apidocSignatureSpan">release.repo.</span>getRepo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.release.spinner">module release.spinner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.release.spinner.create">
+            function <span class="apidocSignatureSpan">release.spinner.</span>create
+            <span class="apidocSignatureSpan">(global.spinner)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.release.spinner.fail">
+            function <span class="apidocSignatureSpan">release.spinner.</span>fail
+            <span class="apidocSignatureSpan">(global.spinner)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.release" id="apidoc.module.release">module release</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.release.definitions" id="apidoc.module.release.definitions">module release.definitions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.release.definitions.reference" id="apidoc.element.release.definitions.reference">
+        function <span class="apidocSignatureSpan">release.definitions.</span>reference
+        <span class="apidocSignatureSpan">(#[-0-9]+\)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">title =&gt; {
+  const match = / \(#[-0-9]+\)/.exec(title);
+
+  if (!match) {
+    return false;
+  }
+
+  return match[0].replace(' (', '').replace(')', '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Ours
+const definitions = require('./definitions');
+
+module.exports = (title, changeTypes) =&gt; {
+const toReplace = {
+  type: definitions.type(title, changeTypes),
+  ref: definitions.<span class="apidocCodeKeywordSpan">reference</span>(title)
+};
+
+for (const definition in toReplace) {
+  if (!{}.hasOwnProperty.call(toReplace, definition)) {
+    continue;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.release.definitions.type" id="apidoc.element.release.definitions.type">
+        function <span class="apidocSignatureSpan">release.definitions.</span>type
+        <span class="apidocSignatureSpan">(text, changeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(text, changeTypes) =&gt; {
+  for (const type of changeTypes) {
+    const handle = '(' + type.handle + ')';
+
+    if (text.includes(handle)) {
+      return type.handle;
+    }
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  const choices = getChoices(changeTypes, tags);
+
+  // Show the latest changes first
+  commits.reverse();
+
+  for (const commit of commits) {
+const defTitle = definitions.<span class="apidocCodeKeywordSpan">type</span>(commit.title, changeTypes);
+const defDescription = definitions.type(commit.description, changeTypes);
+
+const definition = defTitle || defDescription;
+
+if (definition) {
+  predefined[commit.hash] = definition;
+  continue;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.release.repo" id="apidoc.module.release.repo">module release.repo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.release.repo.branchSynced" id="apidoc.element.release.repo.branchSynced">
+        function <span class="apidocSignatureSpan">release.repo.</span>branchSynced
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&gt;
+new Promise(resolve =&gt; {
+  const path = process.cwd();
+
+  const ignore = ['branch', 'stashes', 'untracked'];
+
+  git.isGit(path, exists =&gt; {
+    if (!exists) {
+      return;
+    }
+
+    git.check(path, (err, results) =&gt; {
+      if (err) {
+        resolve(false);
+        return;
+      }
+
+      for (const state of ignore) {
+        delete results[state];
+      }
+
+      for (const result in results) {
+        if (results[result] &gt; 0) {
+          resolve(false);
+          break;
+        }
+      }
+
+      resolve(true);
+    });
+  });
+})</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.release.repo.getRepo" id="apidoc.element.release.repo.getRepo">
+        function <span class="apidocSignatureSpan">release.repo.</span>getRepo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&gt;
+new Promise(resolve =&gt; {
+  repoName((err, repo) =&gt; {
+    if (err) {
+      handleSpinner.fail('Could not determine GitHub repository.');
+      return;
+    }
+
+    const details = { repo };
+    details.user = repoUser();
+
+    resolve(details);
+  });
+})</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Ours
+const connect = require('./connect');
+const repo = require('./repo');
+
+const getPullRequest = number =&gt;
+  new Promise(
+    coroutine(function*(resolve, reject) {
+const repoDetails = yield repo.<span class="apidocCodeKeywordSpan">getRepo</span>();
+const github = yield connect();
+
+github.pullRequests.get(
+  {
+    owner: repoDetails.user,
+    repo: repoDetails.repo,
+    number
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.release.spinner" id="apidoc.module.release.spinner">module release.spinner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.release.spinner.create" id="apidoc.element.release.spinner.create">
+        function <span class="apidocSignatureSpan">release.spinner.</span>create
+        <span class="apidocSignatureSpan">(global.spinner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">message =&gt; {
+  if (global.spinner) {
+    global.spinner.succeed();
+  }
+
+  global.spinner = ora(message).start();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const htmlURL = release.html_url;
+return edit ? htmlURL.replace('/tag/', '/edit/') : htmlURL;
+};
+
+const createRelease = (tag, changelog, exists) =&gt; {
+const isPre = flags.pre ? 'pre' : '';
+handleSpinner.<span class="apidocCodeKeywordSpan">create</span>(`Uploading ${isPre}release`);
+
+const methodPrefix = exists ? 'edit' : 'create';
+const method = methodPrefix + 'Release';
+
+const body = {
+  owner: repoDetails.user,
+  repo: repoDetails.repo,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.release.spinner.fail" id="apidoc.element.release.spinner.fail">
+        function <span class="apidocSignatureSpan">release.spinner.</span>fail
+        <span class="apidocSignatureSpan">(global.spinner)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">message =&gt; {
+  if (global.spinner) {
+    global.spinner.fail();
+    console.log('');
+  }
+
+  console.error(`${red('Error!')} ${message}`);
+
+  // eslint-disable-next-line unicorn/no-process-exit
+  process.exit(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (exists) {
+body.id = exists;
+  }
+
+  githubConnection.repos[method](body, (err, response) =&gt; {
+if (err || !response.data) {
+  console.log('\n');
+  handleSpinner.<span class="apidocCodeKeywordSpan">fail</span>('Failed to upload release.');
+}
+
+global.spinner.succeed();
+const releaseURL = getReleaseURL(response.data, true);
+
+if (releaseURL) {
+  open(releaseURL);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
